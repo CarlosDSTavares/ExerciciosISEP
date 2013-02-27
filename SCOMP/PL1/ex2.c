@@ -3,6 +3,8 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+void verificaErros(pid_t pid); // pre-declaraçao
+
 int main(void) {
 	pid_t pid, pid2;
 	int status;
