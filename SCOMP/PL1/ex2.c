@@ -23,13 +23,13 @@ int main(void)
 			printf("Eu sou o pai\npid = %d\n",getpid());
 			
 			waitpid(pid, &status, 0);
-			if(WEXITSTAUTS(status) != -1){
+			if(WEXITSTATUS(status) != -1){
 				printf("Filho 1 terminou com %d\n", WEXITSTATUS(status));
 			}else{
 				perror("Filho 1 terminou mal\n");
 			}
 			waitpid(pid2, &status, 0);
-			if(WEXITSTAUTS(status) != -1){
+			if(WEXITSTATUS(status) != -1){
 				printf("Filho 2 terminou com %d\n", WEXITSTATUS(status));
 			}else{
 				perror("Filho 2 terminou mal\n");
