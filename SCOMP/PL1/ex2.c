@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
@@ -19,12 +20,9 @@ int main(void) {
 			printf("Eu sou o pai\npid = %d\n",getpid());
 			
 			waitpid(pid, &status, 0); // recebe status
-			
-			/* ESCREVE STATUS */
-			(WEXITSTATUS(status) != -1) ? printf("Filho 1 terminou com %d\n", WEXITSTATUS(status)) : perror("Filho 1 terminou mal\n");
+			(WEXITSTATUS(status) != -1) ? printf("Filho 1 terminou com %d\n", WEXITSTATUS(status)) : perror("Filho 1 terminou mal\n"); // ESCREVE STATUS
 			waitpid(pid2, &status, 0); // recebe status
-			/* ESCREVE STATUS */
-			(WEXITSTATUS(status) != -1) ? printf("Filho 2 terminou com %d\n", WEXITSTATUS(status)) : perror("Filho 2 terminou mal\n");
+			(WEXITSTATUS(status) != -1) ? printf("Filho 2 terminou com %d\n", WEXITSTATUS(status)) : perror("Filho 2 terminou mal\n"); // ESCREVE STATUS
 			
 		}else{ // se for o segundo filho
 			printf("Eu sou o 2 Filho\npid = %d\n",getpid());
@@ -33,7 +31,6 @@ int main(void) {
 	}else{ // se for o filho
 		printf("Eu sou o 1 Filho\npid = %d\n",getpid());
 		sleep(5);
-		
 		exit(1);
 	}
 	
