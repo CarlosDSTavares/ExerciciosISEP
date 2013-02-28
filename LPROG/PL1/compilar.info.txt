@@ -1,6 +1,0 @@
-1. Criar um ficheiro dados.txt com o conteudo a processar
-2. Criar um ficheiro main.flex com o codigo
-3. executar os comandos:
-flex -o main.c main.flex 
-gcc main.c –o exec -lfl
-4. Executar o comando ./exec < dados.txt  para executar
