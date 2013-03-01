@@ -1,0 +1,49 @@
+(1)
+	a) 0(0|1)*0
+	Representa os números binários começados e terminados por 0.
+	={00,000,010,0000,0010,0100,0110,...}
+
+	b) (01)*
+	Todos os números binários formados com repetições da sequência de "01" ou {}
+	={vazio,01,0101,010101,...}
+
+	c) (0|1)*0(0|1)(0|1)
+	Todos os números binários que terminam com 1 zero seguido de 2 qualquer dígitos
+	={000,001,010,011,0000,0001,...}
+
+	d) 0*10*10*10*
+	Contem somente 3 "1"
+	={111,0101010,00100100100,...}
+	
+	e) (0|1)*111(0|1)* 
+	Todos os números binários que cometem pelo menos uma sequência de 3 "1"
+	={111,0111,1110,01110,...}
+
+(2)
+	a) [a-z A-Z]*aa[a-z A-Z]*
+	b) [a-z A-Z]{0,3}
+	c) [A-Z][a-z A-Z]*
+	d) Impossível
+
+(3)
+	a) F
+		(0|1)* <=> (0*|1*)
+		{0,1,01,10,001} <=> {vazio,0,1,00,11,000,111}
+	b) V
+
+(4)
+	a) 0*1(0|1)*00
+	b) .0*(11?0+)*1?1?
+	c) (0* 10* 10*)*
+	d) vazio | (00)* | 1(11)*
+	e) (0|1)* 100
+	f) (0|1){3}
+
+(5)
+	([0-9] | [0-9] | (20)) (F | E | (RF))
+
+(6) ??
+
+(7) ??
+
+(8) ??
